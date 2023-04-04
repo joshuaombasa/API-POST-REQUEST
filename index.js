@@ -32,3 +32,12 @@ function makeRequest(data) {
         request.send(JSON.stringify(data))
     })
 }
+
+async function submitFormData(post) {
+    try {
+        const requestPromise = makeRequest(post)
+        const response = await requestPromise
+    } catch (errorResponse) {
+        
+    }
+}
