@@ -19,5 +19,14 @@ function makeRequest(data) {
     return new Promise((resolve, reject) => {
         let request = new XMLHttpRequest()
         request.open('POST', url + '/create-post')
+        request.onreadystatechange(() => {
+            if (request.readyState === 4) {
+                if (request.status === 201) {
+                    resolve(JSON.parse(request.response))
+                } else {
+                    reject(JSON.parse(request.response))
+                }
+            }
+        })
     })
 }
