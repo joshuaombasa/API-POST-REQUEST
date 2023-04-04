@@ -28,5 +28,7 @@ function makeRequest(data) {
                 }
             }
         })
+        request.setRequestHeader('Content-Type', 'application/json')
+        request.send(JSON.stringify(data))
     })
 }
