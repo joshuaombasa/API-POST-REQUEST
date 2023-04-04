@@ -14,5 +14,7 @@ blogForm.addEventListener("submit", (event) => {
 })
 
 function makeRequest(data) {
-    return new Promise()
+    return new Promise((resolve, reject) => {
+        
+    })
 }
