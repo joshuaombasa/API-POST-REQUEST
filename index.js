@@ -12,3 +12,7 @@ blogForm.addEventListener("submit", (event) => {
 
     console.log(post)
 })
+
+function makeRequest(data) {
+    return new Promise()
+}
