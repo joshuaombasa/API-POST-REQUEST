@@ -17,7 +17,8 @@ blogForm.addEventListener("submit", (event) => {
         content: blogContent.value
     }
 
-    console.log(post)
+    
+    submitFormData(post)
 })
 
 function makeRequest(data) {
@@ -42,7 +43,9 @@ async function submitFormData(post) {
     try {
         const requestPromise = makeRequest(post)
         const response = await requestPromise
+        console.log(response)
+        responseMessage.textContent = response.message
     } catch (errorResponse) {
-
+        responseMessage.textContent = errorResponse.error;
     }
 }
